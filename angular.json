@@ -4,19 +4,6 @@
   "newProjectRoot": "projects",
   "projects": {
     "my-app-liza": {
-      "i18n": {
-        "sourceLocale": "en-US",
-        "locales": {
-          "en": {
-            "translation": "src/locale/messages.en.xlf",
-            "baseHref": ""
-          },
-          "ru": {
-            "translation": "src/locale/messages.ru.xlf",
-            "baseHref": ""
-          }
-        }
-      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -42,17 +29,6 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-app-liza:build:production",
-              "en": {
-                "localize": ["en"],
-                "outputPath": "dist/under-construction-en/",
-                "i18nMissingTranslation": "error"
-              },
-              "ru": {
-                "localize": ["ru"],
-                "outputPath": "dist/under-construction-ru/",
-                "i18nMissingTranslation": "error"
-              },
               "budgets": [
                 {
                   "type": "initial",
