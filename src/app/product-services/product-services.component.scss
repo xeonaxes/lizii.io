@@ -1,0 +1,383 @@
+.block_beengo {
+  width: 1920px;
+}
+.photo_img_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.photo_img_wrapper:after {
+  bottom: 0;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: rgba(51, 51, 51, 0.7);
+}
+.photo_beengo {
+  width: 100%;
+}
+.text_1_beengo {
+  position: absolute;
+  left: 160px;
+  top: 302px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.title_beengo {
+  position: absolute;
+  left: 160px;
+  top: 358px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 160px;
+  color: #ffffff;
+}
+.text_2_beengo {
+  position: absolute;
+  left: 160px;
+  top: 562px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+}
+.block_project {
+  width: 1920px;
+}
+.title_project {
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  color: #383a66;
+  padding-top: 120px;
+}
+.subtext_project {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  text-align: center;
+  color: #8b8b8b;
+  margin-top: 32px;
+}
+.left_project {
+  width: 800px;
+  margin-left: 160px;
+}
+.right_project {
+  margin-right: 160px;
+}
+.left_right_block {
+  margin-top: 84px;
+  display: flex;
+  flex-direction: row;
+  gap: 46px;
+}
+.text_project {
+  display: flex;
+  gap: 89px;
+  padding-top: 84px;
+  justify-content: center;
+}
+.text_1_project {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  width: 736px;
+  color: #8b8b8b;
+}
+.text_1_project p {
+  margin: 5px;
+}
+
+.text_2_project {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  color: #8b8b8b;
+}
+.text_2_project p {
+  margin: 5px;
+}
+.photo_1_project {
+  margin-top: 114px;
+}
+.photo_2_project {
+  margin-top: 80px;
+}
+.block_process {
+  background: #f3f3f9;
+  width: 1920px;
+}
+.title_process {
+  padding-top: 120px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+}
+.subtext_1_process {
+  width: 1065px;
+  margin-top: 84px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #8b8b8b;
+}
+.subtext_process {
+  display: flex;
+  justify-content: center;
+}
+.photo_process {
+  width: 100%;
+  margin-top: 80px;
+}
+.block_search {
+  background: #f3f3f9;
+  width: 1920px;
+}
+.text_search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title_search {
+  margin-top: 120px;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  color: #383a66;
+}
+.subtext_search {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 46px;
+  text-align: center;
+  color: #8b8b8b;
+  margin-top: 284px;
+  width: 100%;
+}
+.photo_search {
+  width: 100%;
+}
+.block_investigate {
+  width: 1920px;
+
+  background: #ffffff;
+}
+.title_invest {
+  margin-top: 120px;
+  width: 100%;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  color: #383a66;
+  display: flex;
+  justify-content: center;
+}
+.subtext_invest {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 84px;
+}
+.subtext_1_invest {
+  width: 594px;
+
+  text-align: center;
+  color: #8b8b8b;
+}
+.img_invest {
+  margin-top: 80px;
+  display: flex;
+}
+.photo_invest_1_2 {
+  position: relative;
+  width: 900px;
+}
+.photo_1_invest {
+  position: absolute;
+  bottom: 0;
+  left: 100px;
+}
+.photo_2_invest {
+  position: absolute;
+  right: 0;
+}
+.block_choice {
+  width: 1920px;
+  margin-top: 100px;
+  background: #ffffff;
+}
+.title_choice {
+  position: absolute;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+  margin-top: 120px;
+  margin-left: 160px;
+}
+.block_designer {
+  width: 1920px;
+
+  background: #ffffff;
+}
+.title_designer {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+  margin-top: 120px;
+}
+.subtext_designer {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  text-align: center;
+  color: #8b8b8b;
+  margin-top: 84px;
+}
+.photo_designer {
+  margin-left: 62px;
+}
+.block_check {
+  width: 1920px;
+
+  background: #f3f3f9;
+}
+.title_check {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+  padding-top: 100px;
+}
+.photo_check {
+  text-align: center;
+  margin-top: 80px;
+}
+.photo_1_check {
+  border-radius: 20px;
+}
+.block_surveillance {
+  width: 1920px;
+
+  background: #ffffff;
+}
+.title_surv {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+  margin-top: 120px;
+}
+.photo_surv {
+  margin-top: 74px;
+}
+.block_assessment {
+  width: 1920px;
+  display: flex;
+  flex-direction: column;
+
+  background: #f3f3f9;
+}
+.title_assess {
+  height: 160px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+  margin-top: 120px;
+}
+.photo_block {
+  display: flex;
+}
+.photo_left_assess {
+  margin-top: 74px;
+}
+.photo_right_assess {
+  margin-top: 174px;
+}
+.block_like {
+  width: 1920px;
+
+  background: #ffffff;
+}
+.title_like {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 80px;
+  text-align: center;
+  color: #383a66;
+  margin-top: 120px;
+}
+.photo_like {
+  margin-top: 84px;
+}
+.vacan_title {
+  width: 832px;
+  height: 200px;
+  margin-left: 160px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 100px;
+  line-height: 100%;
+  color: #333333;
+}
+.vacan {
+  width: 180px;
+  height: 48px;
+  margin-left: 160px;
+  margin-top: 81px;
+  margin-bottom: 137px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 120%;
+  text-align: center;
+}

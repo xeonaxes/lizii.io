@@ -1,0 +1,61 @@
+.header {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  display: flex;
+  position: absolute;
+  width: 1920px;
+  height: 78px;
+  top: 64px;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+  backdrop-filter: blur(6px);
+  z-index: 1;
+  gap: 366px;
+}
+.logo_wrapper {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  width: 374px;
+  height: 78px;
+}
+.logo_img {
+  margin-left: 155px;
+}
+.nav_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 94px;
+}
+.menu {
+  display: flex;
+}
+.menu ul {
+  display: flex;
+  gap: 74px;
+  list-style-type: none;
+}
+.menu a {
+  font-weight: 700;
+  text-decoration: none;
+}
+.nav {
+  color: white;
+}
+.myActiveClass {
+  color: black;
+}
+
+.languages_list ul {
+  display: flex;
+  gap: 24px;
+  list-style-type: none;
+}
+.languages_list a {
+  text-decoration: none;
+}
