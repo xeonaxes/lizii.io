@@ -56,13 +56,15 @@
             aria-current="page"
             class="list-item"
             style="color: white"
-            hreflang="ru"
-            href="/ru/"
+            (click)="changeLanguage('ru')"
             >Rus</a
           >
         </li>
         <li>
-          <a class="list-item" hreflang="en" style="color: white" href="/en/"
+          <a
+            class="list-item"
+            style="color: white"
+            (click)="changeLanguage('en')"
             >Eng</a
           >
         </li>

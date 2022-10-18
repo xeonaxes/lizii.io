@@ -10,7 +10,12 @@ import { HeaderComponent } from './header/header.component';
 import { ProductTurboCardComponent } from './product-turbo-card/product-turbo-card.component';
 import { ProductVervveyComponent } from './product-vervvey/product-vervvey.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+export function HttpLoaderFactory(httpClient: HttpClient) {
+  return new TranslateHttpLoader(httpClient);
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +28,19 @@ import { FooterComponent } from './footer/footer.component';
     ProductVervveyComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
