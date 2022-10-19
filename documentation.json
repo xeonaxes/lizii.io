@@ -1,0 +1,1816 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "Product",
+            "id": "interface-Product-6d4f5932eced114754a92d4e81e19f228707363fb704d571697d57383a070f7569c4d5d94ffe9bd674d9d1ffb3634e5cd18800620af6b61c9794d31a401753dd",
+            "file": "src/app/products.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Product {\n  id: number;\n  name: string;\n  price: number;\n  description: string;\n}\n\nexport const products = [\n  {\n    id: 1,\n    name: 'Phone XL',\n    price: 799,\n    description: 'A large phone with one of the best screens',\n  },\n  {\n    id: 2,\n    name: 'Phone Mini',\n    price: 699,\n    description: 'A great phone with one of the best cameras',\n  },\n  {\n    id: 3,\n    name: 'Phone Standard',\n    price: 299,\n    description: '',\n  },\n];\n",
+            "properties": [
+                {
+                    "name": "description",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "price",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 165,
+            "methods": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-9c7e5f1bbbab702cb032307d130876cb68969b0cd4eedef32a0c8cad8081a54e5f8f577ed6ad4539c1b99a1d246cb34031d198c2ea8eba440e64e91b14f01fdc",
+            "file": "src/stories/User.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {}\n",
+            "properties": [],
+            "indexSignatures": [],
+            "methods": []
+        }
+    ],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-f1a041f8b7d628c9a1bb139e1d84aef7efcac4e04100bba4c548983115fa624077aea260c10760d2f95635476c4d4437d354a0bc5b66a7f870f76752a94b0db8",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "translate",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TranslateService",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { TranslateService } from '@ngx-translate/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.scss'],\n})\nexport class AppComponent {\n  constructor(public translate: TranslateService) {\n    translate.addLangs(['ru', 'en']);\n    translate.setDefaultLang('ru');\n\n    const browserLang = translate.getBrowserLang() as string;\n    translate.use(browserLang.match(/ru|en/) ? 'ru' : browserLang);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "translate",
+                        "type": "TranslateService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "translate",
+                        "type": "TranslateService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "templateData": "<app-header></app-header>\n<router-outlet #outlet=\"outlet\"></router-outlet>\n<app-footer></app-footer>\n"
+        },
+        {
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-4ef205c97a334c309aa4001c8ab4a6d9571dcae18d0e85aaf0d367467ab5d3a9f13ab3573726f1fcb409bc9b49894dadfb80b1bbe1b6ba7041455ad9d4922004",
+            "file": "src/stories/button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-button",
+            "styleUrls": [
+                "./button.css"
+            ],
+            "styles": [],
+            "template": "<button   type=\"button\"\n   (click)=\"onClick.emit($event)\"\n   [ngClass]=\"classes\"\n   [ngStyle]=\"{ 'background-color': backgroundColor }\"\n >\n   {{ label }}\n </button>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nWhat background color to use\n",
+                    "description": "<p>What background color to use</p>\n",
+                    "line": 26,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'Button'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "pos": 711,
+                            "end": 724,
+                            "flags": 4227072,
+                            "modifierFlagsCache": 0,
+                            "transformFlags": 0,
+                            "kind": 325,
+                            "tagName": {
+                                "pos": 712,
+                                "end": 720,
+                                "flags": 4227072,
+                                "modifierFlagsCache": 0,
+                                "transformFlags": 0,
+                                "kind": 79,
+                                "escapedText": "required"
+                            },
+                            "comment": ""
+                        }
+                    ],
+                    "rawdescription": "\n\nButton contents\n\n",
+                    "description": "<p>Button contents</p>\n",
+                    "line": 40,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "primary",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nIs this the principal call to action on the page?\n",
+                    "description": "<p>Is this the principal call to action on the page?</p>\n",
+                    "line": 20,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'medium'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nHow large should the button be?\n",
+                    "description": "<p>How large should the button be?</p>\n",
+                    "line": 32,
+                    "type": "\"small\" | \"medium\" | \"large\"",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onClick",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "rawdescription": "\n\nOptional click handler\n",
+                    "description": "<p>Optional click handler</p>\n",
+                    "line": 46,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-button',\n  template: ` <button\n    type=\"button\"\n    (click)=\"onClick.emit($event)\"\n    [ngClass]=\"classes\"\n    [ngStyle]=\"{ 'background-color': backgroundColor }\"\n  >\n    {{ label }}\n  </button>`,\n  styleUrls: ['./button.css'],\n})\nexport default class ButtonComponent {\n  /**\n   * Is this the principal call to action on the page?\n   */\n  @Input()\n  primary = false;\n\n  /**\n   * What background color to use\n   */\n  @Input()\n  backgroundColor?: string;\n\n  /**\n   * How large should the button be?\n   */\n  @Input()\n  size: 'small' | 'medium' | 'large' = 'medium';\n\n  /**\n   * Button contents\n   *\n   * @required\n   */\n  @Input()\n  label = 'Button';\n\n  /**\n   * Optional click handler\n   */\n  @Output()\n  onClick = new EventEmitter<Event>();\n\n  public get classes(): string[] {\n    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';\n\n    return ['storybook-button', `storybook-button--${this.size}`, mode];\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".storybook-button {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-weight: 700;\n  border: 0;\n  border-radius: 3em;\n  cursor: pointer;\n  display: inline-block;\n  line-height: 1;\n}\n.storybook-button--primary {\n  color: white;\n  background-color: #1ea7fd;\n}\n.storybook-button--secondary {\n  color: #333;\n  background-color: transparent;\n  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;\n}\n.storybook-button--small {\n  font-size: 12px;\n  padding: 10px 16px;\n}\n.storybook-button--medium {\n  font-size: 14px;\n  padding: 11px 20px;\n}\n.storybook-button--large {\n  font-size: 16px;\n  padding: 12px 24px;\n}\n",
+                    "styleUrl": "./button.css"
+                }
+            ],
+            "stylesData": "",
+            "accessors": {
+                "classes": {
+                    "name": "classes",
+                    "getSignature": {
+                        "name": "classes",
+                        "type": "[]",
+                        "returnType": "string[]",
+                        "line": 48
+                    }
+                }
+            }
+        },
+        {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-372883ecd9ce67b24222ea4f41d0dc7bf97cc8b169ea0dccb7355cbd8de599ffa033c7013c0a3d1f9a1372479afaf5ad997085814365923159b5fcb7fc9b4e3f",
+            "file": "src/app/footer/footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer",
+            "styleUrls": [
+                "./footer.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./footer.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-footer',\n  templateUrl: './footer.component.html',\n  styleUrls: ['./footer.component.scss']\n})\nexport class FooterComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".block_footer {\n  width: 1920px;\n  height: 810px;\n  position: relative;\n}\n.block_footer a {\n  color: #ffffff;\n  text-decoration: none;\n  width: 250px;\n  height: 28px;\n}\n.footer_email {\n  position: absolute;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  line-height: 100%;\n  font-size: 100px;\n  width: 853px;\n  height: 100px;\n  left: 160px;\n  top: 120px;\n  color: #ffffff;\n}\n\n.footer_photo {\n  width: 1920px;\n  height: 810px;\n}\n.photo_img_wrapper2 {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.photo_img_wrapper2:after {\n  bottom: 0;\n  content: \"\";\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background: #01152d;\n  opacity: 0.6;\n}\n.logo_divider {\n  border-left: 3px solid white;\n}\n.column1_1 {\n  position: absolute;\n  font-family: \"Roboto\";\n  font-weight: 400;\n  font-size: 20px;\n  line-height: 140%;\n  left: 120px;\n  top: 380px;\n}\n.column1_1 ul {\n  list-style: none;\n}\n\n.column1_1 hr {\n  border: 2px solid #17b0eb;\n  width: 40px;\n  height: 0px;\n  margin-left: 40px;\n}\n.column1_1 li {\n  margin-bottom: 12px;\n}\n\n.column1_2 {\n  position: absolute;\n  display: flex;\n  font-family: \"Roboto\";\n  font-weight: 400;\n  font-size: 20px;\n  line-height: 140%;\n  left: 1000px;\n  top: 380px;\n  gap: 8vw;\n}\n\n.column1_2 ul {\n  list-style: none;\n}\n.column1_2 hr {\n  border: 2px solid #17b0eb;\n  width: 40px;\n}\n.column1_2 li {\n  margin-bottom: 12px;\n}\n.footer_bt {\n  position: absolute;\n  height: 60px;\n  left: 160px;\n  bottom: 0px;\n  color: white;\n  display: flex;\n  gap: 350px;\n  padding-bottom: 30px;\n}\n\n.bt_1 {\n  display: flex;\n\n  gap: 20px;\n}\n.text_bt_1 {\n  align-items: center;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 16px;\n\n  display: flex;\n}\n\n.bt_2 {\n  display: flex;\n  gap: 52px;\n  align-items: center;\n}\n.bt_text1 {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 120%;\n  color: white;\n}\n\n.bt_text2 {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 16px;\n  line-height: 120%;\n  color: white;\n}\n.bt_text3 {\n  width: 100px;\n}\n",
+                    "styleUrl": "./footer.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"block_footer\">\n  <div class=\"photo_img_wrapper2\">\n    <img class=\"footer_photo\" src=\"../../assets/img/Фото (1).png\" />\n  </div>\n  <div class=\"footer_email\">\n    <a href=\"mailto:@hexalcorp.com\">Hello@brightum.io </a>\n  </div>\n  <div class=\"footer_column1\">\n    <div class=\"column1_1\">\n      <hr />\n      <ul>\n        <li><a>Минский офис</a></li>\n        <li>\n          <a href=\"tel:+35283318635\">+375 29 677 27 82</a>\n        </li>\n        <li>\n          <a>Сурганова 61, офис 27-8</a>\n        </li>\n      </ul>\n    </div>\n    <div class=\"column1_2\">\n      <div>\n        <hr />\n        <ul>\n          <li><a href=\"#Услуги\">Услуги</a></li>\n          <li><a href=\"#Персоналии\">Персоналии</a></li>\n          <li><a href=\"#Вакансии\">Вакансии</a></li>\n        </ul>\n      </div>\n      <div>\n        <hr />\n        <ul>\n          <li><a href=\"#Проекты\">Проекты</a></li>\n          <li><a href=\"#Контакты\">Контакты</a></li>\n        </ul>\n      </div>\n      <div>\n        <hr />\n        <ul>\n          <li><a href=\"https://flexbox.malven.co/\">Facebook</a></li>\n          <li>\n            <a href=\"https://flexbox.malven.co/\">Twitter</a>\n          </li>\n          <li><a href=\"https://flexbox.malven.co/\">Instagram</a></li>\n        </ul>\n      </div>\n    </div>\n  </div>\n  <div class=\"footer_bt\">\n    <div class=\"bt_1\">\n      <img\n        class=\"bt_image\"\n        src=\"../../assets/img/Logologo.png\"\n        alt=\"logo_white\"\n      />\n      <div class=\"logo_divider\"></div>\n      <div class=\"text_bt_1\">Мы воплощаем идеи в жизнь</div>\n    </div>\n    <div class=\"bt_2\">\n      <div class=\"bt_text1\">Согласие на обработку персональных данных</div>\n      <div class=\"bt_text2\">Политика конфидициальности</div>\n      <div class=\"bt_text3\">© 2021 Brightum</div>\n    </div>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-a557eec14f72c438a8033301f4d6ce023e0a1844a3b06ec2b38794a612acc31735ae78a5ee10071b230c8c20d699eb914554e69d07ade54adb371da8efb464cc",
+            "file": "src/stories/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-header",
+            "styleUrls": [
+                "./header.css"
+            ],
+            "styles": [],
+            "template": "<header>    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 65,
+                    "type": "User | null",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "onCreateAccount",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 74,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogin",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 68,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "onLogout",
+                    "defaultValue": "new EventEmitter<Event>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 71,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-header',\n  template: `<header>\n    <div class=\"wrapper\">\n      <div>\n        <svg width=\"32\" height=\"32\" viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M10 0h12a10 10 0 0110 10v12a10 10 0 01-10 10H10A10 10 0 010 22V10A10 10 0 0110 0z\"\n              fill=\"#FFF\"\n            />\n            <path\n              d=\"M5.3 10.6l10.4 6v11.1l-10.4-6v-11zm11.4-6.2l9.7 5.5-9.7 5.6V4.4z\"\n              fill=\"#555AB9\"\n            />\n            <path\n              d=\"M27.2 10.6v11.2l-10.5 6V16.5l10.5-6zM15.7 4.4v11L6 10l9.7-5.5z\"\n              fill=\"#91BAF8\"\n            />\n          </g>\n        </svg>\n        <h1>Acme</h1>\n      </div>\n      <div>\n        <div *ngIf=\"user\">\n          <span class=\"welcome\">\n            Welcome, <b>{{ user.name }}</b\n            >!\n          </span>\n          <storybook-button\n            *ngIf=\"user\"\n            size=\"small\"\n            (onClick)=\"onLogout.emit($event)\"\n            label=\"Log out\"\n          ></storybook-button>\n        </div>\n        <div *ngIf=\"!user\">\n          <storybook-button\n            *ngIf=\"!user\"\n            size=\"small\"\n            class=\"margin-left\"\n            (onClick)=\"onLogin.emit($event)\"\n            label=\"Log in\"\n          ></storybook-button>\n          <storybook-button\n            *ngIf=\"!user\"\n            primary\n            size=\"small\"\n            primary=\"true\"\n            class=\"margin-left\"\n            (onClick)=\"onCreateAccount.emit($event)\"\n            label=\"Sign up\"\n          ></storybook-button>\n        </div>\n      </div>\n    </div>\n  </header>`,\n  styleUrls: ['./header.css'],\n})\nexport default class HeaderComponent {\n  @Input()\n  user: User | null = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n\n.welcome {\n  color: #333;\n  font-size: 14px;\n  margin-right: 10px;\n}\n",
+                    "styleUrl": "./header.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "HeaderComponent",
+            "id": "component-HeaderComponent-9e12cf68dcce5ccc1ca4d19aca7e88f11b6f037d7f6348dcf0a4525b586c0fda67539e30aa519654543307f559cf32f57601970893acc4f0c510007c0130bcc7-1",
+            "file": "src/app/header/header.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-header",
+            "styleUrls": [
+                "./header.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./header.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "translate",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "TranslateService",
+                    "optional": false,
+                    "description": "",
+                    "line": 10,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changeLanguage",
+                    "args": [
+                        {
+                            "name": "lang",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 14,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "lang",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\nimport { TranslateService } from '@ngx-translate/core';\n\n@Component({\n  selector: 'app-header',\n  templateUrl: './header.component.html',\n  styleUrls: ['./header.component.scss'],\n})\nexport class HeaderComponent implements OnInit {\n  constructor(public translate: TranslateService) {}\n\n  ngOnInit(): void {}\n\n  changeLanguage(lang: string) {\n    this.translate.use(lang);\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".header {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  display: flex;\n  position: absolute;\n  width: 1920px;\n  height: 78px;\n  top: 64px;\n  background: linear-gradient(\n    270deg,\n    rgba(0, 0, 0, 0.4) 0%,\n    rgba(0, 0, 0, 0.1) 100%\n  );\n  backdrop-filter: blur(6px);\n  z-index: 1;\n  gap: 366px;\n}\n.logo_wrapper {\n  display: flex;\n  align-items: center;\n  background: #ffffff;\n  width: 374px;\n  height: 78px;\n}\n.logo_img {\n  margin-left: 155px;\n}\n.nav_wrapper {\n  display: flex;\n  align-items: center;\n  gap: 94px;\n}\n.menu {\n  display: flex;\n}\n.menu ul {\n  display: flex;\n  gap: 74px;\n  list-style-type: none;\n}\n.menu a {\n  font-weight: 700;\n  text-decoration: none;\n}\n.nav {\n  color: white;\n}\n.myActiveClass {\n  color: black;\n}\n\n.languages_list ul {\n  display: flex;\n  gap: 24px;\n  list-style-type: none;\n}\n.languages_list a {\n  text-decoration: none;\n}\n",
+                    "styleUrl": "./header.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "translate",
+                        "type": "TranslateService",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 9,
+                "jsdoctags": [
+                    {
+                        "name": "translate",
+                        "type": "TranslateService",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "HeaderComponent-1",
+            "templateData": "<div class=\"header\">\n  <div class=\"logo_wrapper\">\n    <div class=\"logo_img\">\n      <img src=\"../../assets/img/Logo (1).png\" alt=\"Brightum Logo\" />\n    </div>\n  </div>\n  <div class=\"nav_wrapper\">\n    <div class=\"menu\">\n      <ul>\n        <li>\n          <a\n            routerLink=\"/\"\n            routerLinkActive=\"myActiveClass\"\n            [routerLinkActiveOptions]=\"{ exact: true }\"\n            class=\"nav\"\n          >\n            Home</a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/product-services\"\n            routerLinkActive=\"myActiveClass\"\n            [routerLinkActiveOptions]=\"{ exact: true }\"\n            class=\"nav\"\n          >\n            Beengo</a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/product-turbo-card\"\n            routerLinkActive=\"myActiveClass\"\n            [routerLinkActiveOptions]=\"{ exact: true }\"\n            class=\"nav\"\n          >\n            TurboCard</a\n          >\n        </li>\n        <li>\n          <a\n            routerLink=\"/product-vervvey\"\n            routerLinkActive=\"myActiveClass\"\n            [routerLinkActiveOptions]=\"{ exact: true }\"\n            class=\"nav\"\n          >\n            Vervvey</a\n          >\n        </li>\n      </ul>\n    </div>\n    <div class=\"languages_list\">\n      <ul>\n        <li>\n          <a\n            aria-current=\"page\"\n            class=\"list-item\"\n            style=\"color: white\"\n            (click)=\"changeLanguage('ru')\"\n            >Rus</a\n          >\n        </li>\n        <li>\n          <a\n            class=\"list-item\"\n            style=\"color: white\"\n            (click)=\"changeLanguage('en')\"\n            >Eng</a\n          >\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "PageComponent",
+            "id": "component-PageComponent-7126d8c2607c946741c651482413b43feb72b2d63cac9d3ac173fde206a5e635eb4cdbf7ca7ac9327c7d4d05cf7ef619144c34c11609ad677081d0ee4e855064",
+            "file": "src/stories/page.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-page",
+            "styleUrls": [
+                "./page.css"
+            ],
+            "styles": [],
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "templateUrl": [],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "user",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "User | null",
+                    "optional": false,
+                    "description": "",
+                    "line": 64
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "doCreateAccount",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 74,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 70,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "doLogout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 66,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\nimport { User } from './User';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"doLogout()\"\n      (onLogin)=\"doLogin()\"\n      (onCreateAccount)=\"doCreateAccount()\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  user: User | null = null;\n\n  doLogout() {\n    this.user = null;\n  }\n\n  doLogin() {\n    this.user = { name: 'Jane Doe' };\n  }\n\n  doCreateAccount() {\n    this.user = { name: 'Jane Doe' };\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "section {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 14px;\n  line-height: 24px;\n  padding: 48px 20px;\n  margin: 0 auto;\n  max-width: 600px;\n  color: #333;\n}\n\nsection h2 {\n  font-weight: 900;\n  font-size: 32px;\n  line-height: 1;\n  margin: 0 0 4px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nsection p {\n  margin: 1em 0;\n}\n\nsection a {\n  text-decoration: none;\n  color: #1ea7fd;\n}\n\nsection ul {\n  padding-left: 30px;\n  margin: 1em 0;\n}\n\nsection li {\n  margin-bottom: 8px;\n}\n\nsection .tip {\n  display: inline-block;\n  border-radius: 1em;\n  font-size: 11px;\n  line-height: 12px;\n  font-weight: 700;\n  background: #e7fdd8;\n  color: #66bf3c;\n  padding: 4px 12px;\n  margin-right: 10px;\n  vertical-align: top;\n}\n\nsection .tip-wrapper {\n  font-size: 13px;\n  line-height: 20px;\n  margin-top: 40px;\n  margin-bottom: 40px;\n}\n\nsection .tip-wrapper svg {\n  display: inline-block;\n  height: 12px;\n  width: 12px;\n  margin-right: 4px;\n  vertical-align: top;\n  margin-top: 3px;\n}\n\nsection .tip-wrapper svg path {\n  fill: #1ea7fd;\n}\n",
+                    "styleUrl": "./page.css"
+                }
+            ],
+            "stylesData": ""
+        },
+        {
+            "name": "ProductAlertsComponent",
+            "id": "component-ProductAlertsComponent-2921958d6b2905ffd9ba59634067c71a26c93ab6744678b6177b585154c8263bacc9f57e4a3a9e7298f5a0adb0b5ded1b00cb9e126e54c8ed9905aa23ca0ce2e",
+            "file": "src/app/product-alerts/product-alerts.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-alerts",
+            "styleUrls": [
+                "./product-alerts.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./product-alerts.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "product",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "Product | undefined",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "notify",
+                    "defaultValue": "new EventEmitter()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\nimport { Product } from '../products';\n\n@Component({\n  selector: 'app-product-alerts',\n  templateUrl: './product-alerts.component.html',\n  styleUrls: ['./product-alerts.component.scss'],\n})\nexport class ProductAlertsComponent {\n  @Input() product: Product | undefined;\n  @Output() notify = new EventEmitter();\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./product-alerts.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<p *ngIf=\"product && product.price > 700\">\n  <button type=\"button\" (click)=\"notify.emit()\">Notify Me</button>\n</p>\n"
+        },
+        {
+            "name": "ProductListComponent",
+            "id": "component-ProductListComponent-ce9c7bbee7801ea0c65cf072c449315557464e48e501501719a41c3ee54f943846b2a44cdf26a153d3081eb05ae64a7fb6a042551f61feb90fcc676eeec326f3",
+            "file": "src/app/product-list/product-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-list",
+            "styleUrls": [
+                "./product-list.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./product-list.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "products",
+                    "defaultValue": "[...products]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onNotify",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "share",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\nimport { products } from '../products';\n\n@Component({\n  selector: 'app-product-list',\n  templateUrl: './product-list.component.html',\n  styleUrls: ['./product-list.component.scss'],\n})\nexport class ProductListComponent {\n  products = [...products];\n\n  share() {\n    window.alert('The product has been shared!');\n  }\n\n  onNotify() {\n    window.alert('You will be notified when the product goes on sale');\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./product-list.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<app-top-bar></app-top-bar>\n<h2>Products</h2>\n<div *ngFor=\"let product of products\">\n  <h3>\n    <a [title]=\"product.name + ' details'\">\n      {{ product.name }}\n    </a>\n  </h3>\n  <p *ngIf=\"product.description\">Description: {{ product.description }}</p>\n  <button class=\"mybutton\" type=\"button\" (click)=\"share()\">Share</button>\n  <app-product-alerts [product]=\"product\" (notify)=\"onNotify()\">\n  </app-product-alerts>\n</div>\n"
+        },
+        {
+            "name": "ProductServicesComponent",
+            "id": "component-ProductServicesComponent-d323bd4f5792f3e3eb7e4244e6ecafaa3f5e88f23de8526da8d0ebb78e082e364d5559256bd136c95d91540f7d799527a89a5485c8a43d5fc0b304289ba46ffe",
+            "file": "src/app/product-services/product-services.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-services",
+            "styleUrls": [
+                "./product-services.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./product-services.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-product-services',\n  templateUrl: './product-services.component.html',\n  styleUrls: ['./product-services.component.scss'],\n})\nexport class ProductServicesComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".block_beengo {\n  width: 1920px;\n}\n.photo_img_wrapper {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.photo_img_wrapper:after {\n  bottom: 0;\n  content: \"\";\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n  background: rgba(51, 51, 51, 0.7);\n}\n.photo_beengo {\n  width: 100%;\n}\n.text_1_beengo {\n  position: absolute;\n  left: 160px;\n  top: 302px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 24px;\n  text-transform: uppercase;\n  color: #ffffff;\n}\n.title_beengo {\n  position: absolute;\n  left: 160px;\n  top: 358px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 160px;\n  color: #ffffff;\n}\n.text_2_beengo {\n  position: absolute;\n  left: 160px;\n  top: 562px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  color: #ffffff;\n}\n.block_project {\n  width: 1920px;\n}\n.title_project {\n  display: flex;\n  justify-content: center;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  color: #383a66;\n  padding-top: 120px;\n}\n.subtext_project {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 46px;\n  text-align: center;\n  color: #8b8b8b;\n  margin-top: 32px;\n}\n.left_project {\n  width: 800px;\n  margin-left: 160px;\n}\n.right_project {\n  margin-right: 160px;\n}\n.left_right_block {\n  margin-top: 84px;\n  display: flex;\n  flex-direction: row;\n  gap: 46px;\n}\n.text_project {\n  display: flex;\n  gap: 89px;\n  padding-top: 84px;\n  justify-content: center;\n}\n.text_1_project {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  width: 736px;\n  color: #8b8b8b;\n}\n.text_1_project p {\n  margin: 5px;\n}\n\n.text_2_project {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  color: #8b8b8b;\n}\n.text_2_project p {\n  margin: 5px;\n}\n.photo_1_project {\n  margin-top: 114px;\n}\n.photo_2_project {\n  margin-top: 80px;\n}\n.block_process {\n  background: #f3f3f9;\n  width: 1920px;\n}\n.title_process {\n  padding-top: 120px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n}\n.subtext_1_process {\n  width: 1065px;\n  margin-top: 84px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  text-align: center;\n  color: #8b8b8b;\n}\n.subtext_process {\n  display: flex;\n  justify-content: center;\n}\n.photo_process {\n  width: 100%;\n  margin-top: 80px;\n}\n.block_search {\n  background: #f3f3f9;\n  width: 1920px;\n}\n.text_search {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n}\n.title_search {\n  margin-top: 120px;\n  width: 100%;\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  color: #383a66;\n}\n.subtext_search {\n  position: absolute;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 46px;\n  text-align: center;\n  color: #8b8b8b;\n  margin-top: 284px;\n  width: 100%;\n}\n.photo_search {\n  width: 100%;\n}\n.block_investigate {\n  width: 1920px;\n\n  background: #ffffff;\n}\n.title_invest {\n  margin-top: 120px;\n  width: 100%;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  color: #383a66;\n  display: flex;\n  justify-content: center;\n}\n.subtext_invest {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  margin-top: 84px;\n}\n.subtext_1_invest {\n  width: 594px;\n\n  text-align: center;\n  color: #8b8b8b;\n}\n.img_invest {\n  margin-top: 80px;\n  display: flex;\n}\n.photo_invest_1_2 {\n  position: relative;\n  width: 900px;\n}\n.photo_1_invest {\n  position: absolute;\n  bottom: 0;\n  left: 100px;\n}\n.photo_2_invest {\n  position: absolute;\n  right: 0;\n}\n.block_choice {\n  width: 1920px;\n  margin-top: 100px;\n  background: #ffffff;\n}\n.title_choice {\n  position: absolute;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n  margin-top: 120px;\n  margin-left: 160px;\n}\n.block_designer {\n  width: 1920px;\n\n  background: #ffffff;\n}\n.title_designer {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n  margin-top: 120px;\n}\n.subtext_designer {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  text-align: center;\n  color: #8b8b8b;\n  margin-top: 84px;\n}\n.photo_designer {\n  margin-left: 62px;\n}\n.block_check {\n  width: 1920px;\n\n  background: #f3f3f9;\n}\n.title_check {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n  padding-top: 100px;\n}\n.photo_check {\n  text-align: center;\n  margin-top: 80px;\n}\n.photo_1_check {\n  border-radius: 20px;\n}\n.block_surveillance {\n  width: 1920px;\n\n  background: #ffffff;\n}\n.title_surv {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n  margin-top: 120px;\n}\n.photo_surv {\n  margin-top: 74px;\n}\n.block_assessment {\n  width: 1920px;\n  display: flex;\n  flex-direction: column;\n\n  background: #f3f3f9;\n}\n.title_assess {\n  height: 160px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n  margin-top: 120px;\n}\n.photo_block {\n  display: flex;\n}\n.photo_left_assess {\n  margin-top: 74px;\n}\n.photo_right_assess {\n  margin-top: 174px;\n}\n.block_like {\n  width: 1920px;\n\n  background: #ffffff;\n}\n.title_like {\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  text-align: center;\n  color: #383a66;\n  margin-top: 120px;\n}\n.photo_like {\n  margin-top: 84px;\n}\n.vacan_title {\n  width: 832px;\n  height: 200px;\n  margin-left: 160px;\n\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 100px;\n  line-height: 100%;\n  color: #333333;\n}\n.vacan {\n  width: 180px;\n  height: 48px;\n  margin-left: 160px;\n  margin-top: 81px;\n  margin-bottom: 137px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  text-align: center;\n}\n",
+                    "styleUrl": "./product-services.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"block_beengo\">\n  <div class=\"photo_img_wrapper\">\n    <img class=\"photo_beengo\" src=\"../../assets/img/bike.png\" />\n  </div>\n  <div class=\"text_1_beengo\">Резработка / Дизайн</div>\n  <div class=\"title_beengo\">Beengo</div>\n  <div class=\"text_2_beengo\">\n    Выиграйте свое время для жизни, а желание утолить голод оставьте нам!\n  </div>\n</div>\n<div class=\"block_project\">\n  <div class=\"title_project_text\">\n    <div class=\"title_project\">О проекте</div>\n    <div class=\"subtext_project\">\n      Платформа по доставке готовых блюд из ресторанов и кафе\n    </div>\n  </div>\n  <div class=\"text_project\">\n    <div class=\"text_1_project\">\n      <p>\n        Перед нами стояла задача создать комплексный продукт, который позволял\n        бы осуществлять доставку готовой еды из заведений общественного питания,\n        при этом удовлетворяя всех пользователей данного продукта. Таких было\n        четверо – конечный клиент, курьер, ресторан, сотрудники платформы.\n      </p>\n    </div>\n    <div class=\"text_2_project\">\n      <p>Поэтому нами были продуманы и разработаны следующие модули:</p>\n      <p>Web/iOS/Android - для клиента;</p>\n      <p>Web/iOS/Android - для ресторана.</p>\n      <p>Web - для сотрудников платформы;</p>\n      <p>Android - для курьеров.</p>\n    </div>\n  </div>\n  <div class=\"left_right_block\">\n    <div class=\"left_project\">\n      <img class=\"photo_1_project\" src=\"../../assets/img/Фото 1Food.png\" />\n    </div>\n    <div class=\"right_project\">\n      <img class=\"photo_2_project\" src=\"../../assets/img/Фото 2food2.png\" />\n      <img class=\"photo_3_project\" src=\"../../assets/img/Фото 3food3.png\" />\n    </div>\n  </div>\n</div>\n<div class=\"block_process\">\n  <div class=\"title_process\">Процесс заказа</div>\n  <div class=\"subtext_process\">\n    <div class=\"subtext_1_process\">\n      Далеко не всегда есть время посетить кафе, а так хочется насладиться\n      любимым блюдом или попробовать что-то новенькое, не выходя из дома или\n      офиса. Тогда на помощь вам придет Платформа Beengo.\n    </div>\n  </div>\n\n  <img class=\"photo_process\" src=\"../../assets/img/Фотоnumber.png\" />\n</div>\n<div class=\"block_search\">\n  <div class=\"title_search\">Найди</div>\n  <div class=\"subtext_search\">\n    Поиск по категориям или отслеживание «живой ленты»\n  </div>\n\n  <img class=\"photo_search\" src=\"../../assets/img/Фотоmenu.png\" />\n</div>\n<div class=\"block_investigate\">\n  <div class=\"title_invest\">Исследуй</div>\n  <div class=\"subtext_invest\">\n    <div class=\"subtext_1_invest\">\n      Чтобы сделать выбор прощe, сначала выбери из популярных категорий\n    </div>\n  </div>\n\n  <div class=\"img_invest\">\n    <div class=\"photo_invest_1_2\">\n      <img class=\"photo_1_invest\" src=\"../../assets/img/image 20pizza1.png\" />\n      <img class=\"photo_2_invest\" src=\"../../assets/img/image 19pizza2.png\" />\n    </div>\n\n    <img class=\"photo_3_invest\" src=\"../../assets/img/image 17pizza3.png\" />\n  </div>\n</div>\n<div class=\"block_choice\">\n  <div class=\"title_choice\">Сделай свой выбор</div>\n\n  <img class=\"photo_choice\" src=\"../../assets/img/Фотоpizza.png\" />\n</div>\n<div class=\"block_designer\">\n  <div class=\"title_designer\">Конструктор блюд</div>\n  <div class=\"subtext_designer\">\n    Клиент может выбрать из уже готового меню, а также создать свое собственное\n    блюдо\n  </div>\n\n  <img class=\"photo_designer\" src=\"../../assets/img/Фотоkonst.png\" />\n</div>\n<div class=\"block_check\">\n  <div class=\"title_check\">Подтверждение заказа и оплата</div>\n  <div class=\"photo_check\">\n    <img class=\"photo_1_check\" src=\"../../assets/img/Rectangle 46check.png\" />\n  </div>\n</div>\n<div class=\"block_surveillance\">\n  <div class=\"title_surv\">Отслеживание заказа</div>\n\n  <img class=\"photo_surv\" src=\"../../assets/img/Фотоsled.png\" />\n</div>\n<div class=\"block_assessment\">\n  <div class=\"title_assess\">Ставь оценки курьерам и ресторанам</div>\n  <div class=\"photo_block\">\n    <div class=\"photo_left_assess\">\n      <img class=\"photo_assess_1\" src=\"../../assets/img/image 17left.png\" />\n    </div>\n    <div class=\"photo_right_assess\">\n      <img class=\"photo_assess_2\" src=\"../../assets/img/image 17right.png\" />\n    </div>\n  </div>\n</div>\n<div class=\"block_like\">\n  <div class=\"title_like\">Получи лояльность клиентов</div>\n  <img class=\"photo_like\" src=\"../../assets/img/Фотоfalov.png\" />\n</div>\n<div class=\"block_vacancies\">\n  <div class=\"vacan_title\">Готовы работать с нами?</div>\n  <div class=\"vacan\">\n    <a href=\"https://flexboxfroggy.com/#ru\">Вакансии</a>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "ProductTurboCardComponent",
+            "id": "component-ProductTurboCardComponent-9f6f27fffb60c901849d8bdf767a4631c56082daa91db9cb486039ac4a879592ed40e0a124cbab024d3c63b7ee3f5489b560d2b9e5e866b24747d326e62e87b6",
+            "file": "src/app/product-turbo-card/product-turbo-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-turbo-card",
+            "styleUrls": [
+                "./product-turbo-card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./product-turbo-card.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-product-turbo-card',\n  templateUrl: './product-turbo-card.component.html',\n  styleUrls: ['./product-turbo-card.component.scss']\n})\nexport class ProductTurboCardComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".block_info {\n  position: relative;\n  width: 1920px;\n  height: 1010px;\n}\n.photo_img_wrapper {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.photo_img_wrapper:after {\n  background: rgba(51, 51, 51, 0.7);\n  bottom: 0;\n  content: \"\";\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n\n.info_photo {\n  width: 1920px;\n  height: 1010px;\n}\n\n.info_text {\n  position: absolute;\n  width: 271px;\n  height: 24px;\n  left: 160px;\n  top: 302px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 100%;\n  text-transform: uppercase;\n  color: #ffffff;\n}\n.info_title {\n  position: absolute;\n  width: 597px;\n  height: 160px;\n  left: 160px;\n  top: 358px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 160px;\n  line-height: 100%;\n  color: #ffffff;\n}\n.info_textt {\n  position: absolute;\n  width: 597px;\n  height: 34px;\n  left: 160px;\n  top: 562px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #ffffff;\n}\n.block_project {\n  width: 1920px;\n  height: 2172px;\n  background: #ffffff;\n  font-family: \"Roboto\";\n  font-style: normal;\n}\n.project_chapter {\n  text-align: center;\n  width: 1063px;\n  margin-left: 429px;\n}\n\n.chapter {\n  font-weight: 900;\n  font-size: 80px;\n  color: #383a66;\n  margin-top: 120px;\n}\n.project_text {\n  display: flex;\n  font-weight: 400;\n  font-size: 46px;\n  color: #8b8b8b;\n  margin-top: 32px;\n}\n.pro_block {\n  display: flex;\n}\n.pro_left {\n  width: 800px;\n  margin-left: 160px;\n}\n.pro_right {\n  margin-right: 160px;\n}\n.project_text1 {\n  width: 780px;\n  height: 170px;\n  left: 160px;\n  top: 444px;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  text-align: justify;\n  color: #8b8b8b;\n  margin-top: 84px;\n}\n.project_title {\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  color: #333333;\n  margin-top: 94px;\n}\n.project_text2 {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n  margin-top: 32px;\n}\n.project_photo1 {\n  margin-right: 160px;\n  width: 770px;\n  height: 830px;\n  margin-top: 0px;\n}\n.project_title2 {\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  color: #333333;\n}\n.project_text3 {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n\n.project_footer {\n  margin-left: 160px;\n  margin-right: 160px;\n}\n\n.project_title3 {\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  color: #333333;\n  margin-top: 31px;\n}\n.project_text4 {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n  margin-top: 32px;\n}\n.block_photo {\n  width: 1920px;\n  height: 1536px;\n  background: #ffffff;\n}\n.block_result {\n  font-family: \"Roboto\";\n  font-style: normal;\n  width: 1920px;\n  height: 1010px;\n  background: #ffffff;\n}\n.result {\n  text-align: center;\n  margin-top: 120px;\n  font-weight: 900;\n  font-size: 80px;\n  color: #383a66;\n}\n.result_text {\n  width: 1063px;\n  margin-left: 429px;\n  display: flex;\n  margin-top: 32px;\n  font-weight: 400;\n  font-size: 46px;\n  line-height: 140%;\n  text-align: center;\n  color: #8b8b8b;\n}\n.result_text1 {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n  margin-left: 160px;\n  margin-right: 160px;\n  margin-top: 84px;\n}\n.result_text1 p {\n  margin: 0;\n}\n.result_title {\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  color: #333333;\n  margin-left: 160px;\n  margin-right: 160px;\n  margin-top: 60px;\n}\n.result_text2 {\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n  margin-left: 160px;\n  margin-right: 160px;\n  margin-top: 32px;\n}\n.vacan_title {\n  width: 832px;\n  height: 200px;\n  margin-left: 160px;\n\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 100px;\n  line-height: 100%;\n  color: #333333;\n}\n.vacan {\n  width: 180px;\n  height: 48px;\n  margin-left: 160px;\n  margin-top: 81px;\n  margin-bottom: 137px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  text-align: center;\n}\n",
+                    "styleUrl": "./product-turbo-card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"block_info\">\n  <div class=\"photo_img_wrapper\">\n    <img class=\"info_photo\" src=\"../../assets/img/pin.png\" />\n  </div>\n  <div class=\"info_text\">Резработка/Дизайн</div>\n  <div class=\"info_title\">TurboCard</div>\n  <div class=\"info_textt\">\n    Улучшение экономической ситуации и эмоционального состояния клиентов\n  </div>\n</div>\n<div class=\"block_project\">\n  <div class=\"project_chapter\">\n    <div class=\"chapter\">О проекте</div>\n    <div class=\"project_text\">\n      Удобное приложение TurboCard для получения досрочной выплаты части\n      заработной платы\n    </div>\n  </div>\n  <div class=\"pro_block\">\n    <div class=\"pro_left\">\n      <div class=\"project_text1\">\n        Простое, удобное приложение TurboCard для получения досрочной выплаты\n        части заработной платы за уже отработанное время призвано снизить\n        кредитную нагрузку линейного персонала, избавляя его от необходимости\n        брать кредиты, снижая риск просрочки платежей и сборов за овердрафт\n      </div>\n      <div class=\"project_title\">Задача</div>\n      <div class=\"project_text2\">\n        Задача проекта - улучшение экономической ситуации и эмоционального\n        состояния клиентов за счет использования социально ответственного\n        финансового продукта ывать услуги своим клиентам.\n      </div>\n      <img class=\"project_photo1\" src=\"../../assets/img/phone_left.png\" />\n    </div>\n    <div class=\"pro_right\">\n      <img class=\"project_photo2\" src=\"../../assets/img/phone_right.png\" />\n      <div class=\"project_title2\">Ход работы</div>\n      <div class=\"project_text3\">\n        Для определения наилучшего способа использования высоких технологий,\n        направленных на устранение обозначенных проблем, были проанализированы\n        различные варианты решений и опыт рынка финтех-продуктов. Был выбран\n        вариант взаимодействия трёх сторон: Сотрудник – Работодатель –Банк,\n        которое заключается в создании Сервиса получения оплаты по запросу,\n        позволяющего пройти весь процесс от заявки до получения средств за\n        максимально короткий срок 24/7/365, где бы ни находился сотрудник\n      </div>\n    </div>\n  </div>\n  <div class=\"project_footer\">\n    <div class=\"project_title3\">Преимущества подхода</div>\n    <div class=\"project_text4\">\n      При данном подходе застрахованы все стороны – для сотрудника отсутствует\n      угроза скрытых комиссий и дополнительных взысканий; Банк имеет условный\n      залог в виде обязательного поступления заработной платы сотрудника в\n      установленный срок; Работодателю не требуется изыскивать дополнительные\n      ресурсы для поддержания сотрудников в непростой финансовой ситуации.\n      Сумма, которую может получить сотрудник, соответствует его фактическому\n      заработку за указанный период и выдается ему досрочно без % или взимания\n      комиссии, с четко установленной платой за транзакцию вне зависимости от\n      суммы\n    </div>\n  </div>\n</div>\n\n<div class=\"block_photo\">\n  <img class=\"project_photo2\" src=\"../../assets/img/880.png\" />\n</div>\n<div class=\"block_result\">\n  <div class=\"result\">Результат:</div>\n  <div class=\"result_text\">\n    Описанный ниже подход позволяет достигнуть цели с максимальной простотой и\n    эффективностью\n  </div>\n  <div class=\"result_text1\">\n    <p>\n      • Сотрудники смогут запрашивать выплату средств за уже отработанные часы в\n      любое время из любого места, вместо того, чтобы искать иные источники\n      получения заёмных средств;\n    </p>\n    <p>\n      • Работодатель не приобретёт излишней финансовой нагрузки за счет участия\n      Банка, упрочнив при этом связи с собственными наемными работниками;\n    </p>\n    <p>\n      • Банк получит приток клиентов по зарплатным проектам, а также\n      дополнительный источник получения вознаграждения в качестве оплаты за\n      перевод\n    </p>\n  </div>\n  <div class=\"result_title\">Развитие продукта:</div>\n  <div class=\"result_text2\">\n    Версия 1.0. продукта представляет собой модуль, готовый к интеграции с\n    контуром любого банка. Вариант развития - подготовка плагина к интеграции в\n    системы Работодателя, равно как и развитие самого продукта – создание\n    дополнительных функций для оптимизации финансового поведения Пользователя\n  </div>\n</div>\n<div class=\"block_vacancies\">\n  <div class=\"vacan_title\">Готовы работать с нами?</div>\n  <div class=\"vacan\">\n    <a href=\"https://flexboxfroggy.com/#ru\">Вакансии</a>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "ProductVervveyComponent",
+            "id": "component-ProductVervveyComponent-c9e8c06cf78c64a3f53bbf6acf6b67487c8f1e4bd80155a173406b2aac4be0d79afee3bdb7f66d23b9e6aee70723b9550420d9207375c9d3d47214c3b0691413",
+            "file": "src/app/product-vervvey/product-vervvey.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-product-vervvey",
+            "styleUrls": [
+                "./product-vervvey.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./product-vervvey.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 11,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-product-vervvey',\n  templateUrl: './product-vervvey.component.html',\n  styleUrls: ['./product-vervvey.component.scss'],\n})\nexport class ProductVervveyComponent implements OnInit {\n  constructor() {}\n\n  ngOnInit(): void {}\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".block_info {\n  position: relative;\n  width: 1920px;\n  height: 1010px;\n}\n.photo_img_wrapper {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n.photo_img_wrapper:after {\n  background: rgba(51, 51, 51, 0.7);\n  bottom: 0;\n  content: \"\";\n  left: 0;\n  position: absolute;\n  right: 0;\n  top: 0;\n}\n\n.info_photo {\n  width: 1920px;\n  height: 1010px;\n}\n\n.info_text {\n  position: absolute;\n  width: 271px;\n  height: 24px;\n  left: 160px;\n  top: 302px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 700;\n  font-size: 24px;\n  line-height: 100%;\n  text-transform: uppercase;\n  color: #ffffff;\n}\n.info_title {\n  position: absolute;\n  width: 597px;\n  height: 160px;\n  left: 160px;\n  top: 358px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 160px;\n  line-height: 100%;\n  color: #ffffff;\n}\n.info_textt {\n  position: absolute;\n  width: 597px;\n  height: 34px;\n  left: 160px;\n  top: 562px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #ffffff;\n}\n.block_project {\n  display: flex;\n  width: 1920px;\n  height: 950px;\n  background: #ffffff;\n  gap: 60px;\n}\n\n.project_title {\n  width: 383px;\n  height: 80px;\n  margin-left: 160px;\n  margin-top: 120px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  line-height: 100%;\n  color: #383a66;\n}\n.project_title1 {\n  width: 770px;\n  height: 192px;\n  margin-left: 160px;\n  margin-top: 32px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 46px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n.project_text1 {\n  width: 770px;\n  height: 136px;\n  margin-left: 160px;\n  margin-top: 84px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n.project_text2 {\n  width: 770px;\n  height: 170px;\n  margin-left: 160px;\n  margin-top: 16px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n\n.project_photo {\n  margin-right: 160px;\n  margin-bottom: 120px;\n  width: 770px;\n  height: 830px;\n  margin-top: 0px;\n}\n.block_capabilities {\n  width: 1920px;\n  height: 2722px;\n  background: #ffffff;\n}\n.cap_title {\n  width: 1124px;\n  height: 80px;\n  margin-left: 160px;\n  margin-top: 120px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  line-height: 100%;\n  color: #383a66;\n}\n.cap_text1 {\n  width: 1600px;\n  height: 68px;\n  margin-left: 160px;\n  margin-top: 84px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n.cap_photo1 {\n  width: 1600px;\n  height: 992px;\n  margin-left: 0px;\n  margin-top: 40px;\n}\n.cap_text2 {\n  width: 1600px;\n  height: 68px;\n  margin-left: 160px;\n  margin-top: 1168px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n.cap_photo2 {\n  width: 1600px;\n  height: 992px;\n  margin-left: 0px;\n  margin-top: 40px;\n}\n.block_admin {\n  width: 1920px;\n  height: 2258px;\n  background: #ffffff;\n}\n.admin_title1 {\n  width: 1600px;\n  height: 80px;\n  margin-left: 160px;\n  margin-top: 120px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  line-height: 100%;\n  color: #383a66;\n}\n.admin_text1 {\n  width: 1600px;\n  height: 102px;\n  margin-left: 160px;\n  margin-top: 84px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n.admin_title2 {\n  width: 804px;\n  height: 80px;\n  margin-left: 160px;\n  margin-top: 120px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 80px;\n  line-height: 100%;\n  color: #383a66;\n}\n.admin_text2 {\n  width: 1600px;\n  height: 68px;\n  margin-left: 160px;\n  margin-top: 84px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 400;\n  font-size: 24px;\n  line-height: 140%;\n  color: #8b8b8b;\n}\n.admin_photo {\n  width: 1600px;\n  height: 1280px;\n  margin-left: 160px;\n  margin-top: 120px;\n}\n.block_vacancies {\n  width: 1920px;\n  height: 586px;\n  background: #ffffff;\n}\n.vacan_title {\n  width: 832px;\n  height: 200px;\n  margin-left: 160px;\n  margin-top: 120px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 100px;\n  line-height: 100%;\n  color: #333333;\n}\n.vacan {\n  width: 180px;\n  height: 48px;\n  margin-left: 160px;\n  margin-top: 81px;\n  font-family: \"Roboto\";\n  font-style: normal;\n  font-weight: 900;\n  font-size: 40px;\n  line-height: 120%;\n  text-align: center;\n}\n",
+                    "styleUrl": "./product-vervvey.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"block_info\">\n  <div class=\"photo_img_wrapper\">\n    <img class=\"info_photo\" src=\"../../assets/img/Photo.png\" />\n  </div>\n  <div class=\"info_text\">{{ \"productVervvey.infoText\" | translate }}</div>\n  <div class=\"info_title\">Vervvey</div>\n  <div class=\"info_textt\">{{ \"productVervvey.infoTextt\" | translate }}</div>\n</div>\n<div class=\"block_project\">\n  <div class=\"pro_left\">\n    <div class=\"project_title\">\n      {{ \"productVervvey.projectTitle\" | translate }}\n    </div>\n    <div class=\"project_title1\">\n      {{ \"productVervvey.projectTitle1\" | translate }}\n    </div>\n    <div class=\"project_text1\">\n      В рамках проекта мы стремились создать удобный инструмент для выстраивания\n      связей между профессиональными участниками рынка бьюти-услуг, который\n      позволил бы удовлетворить интересы каждого из них.\n    </div>\n    <div class=\"project_text2\">\n      Салоны красоты получают возможность зарабатывать, сдавая в аренду\n      оборудованные рабочие места. Мастера получают доступ к огромному каталогу\n      заинтересованных в сотрудничестве салонов, в помещениях которых они могут\n      оказывать услуги своим клиентам.\n    </div>\n  </div>\n  <div class=\"pro_right\">\n    <img class=\"project_photo\" src=\"../../assets/img/Photo (1).png\" />\n  </div>\n</div>\n<div class=\"block_capabilities\">\n  <div class=\"cap_title\">Возможности пользователей</div>\n  <div class=\"cap_text1\">\n    <p>\n      В рамках регистрации мастера и салоны создают публично доступные профили\n      со всей необходимой информацией о профессиональной деятельности и\n      принципах работы\n    </p>\n    <img class=\"cap_photo1\" src=\"../../assets/img/Phote.png\" />\n  </div>\n  <div class=\"cap_text2\">\n    <p>\n      Мастера при помощи каталога выбирают салоны для сотрудничества, отправляют\n      заявки и при их одобрении получают доступ к календарю для бронирования\n      рабочих мест на выбранные даты. Система рейтинга и взаимных отзывов\n      повышает прозрачность сервиса и позволяет пользователям получать обратную\n      связь от контрагентов.\n    </p>\n    <img class=\"cap_photo2\" src=\"../../assets/img/Photi.png\" />\n  </div>\n</div>\n<div class=\"block_admin\">\n  <div class=\"admin_title1\">Администрирование платформы</div>\n  <div class=\"admin_text1\">\n    Любая публичная площадка нуждается в стражах порядка, и Vervvey не стала\n    исключением. Администраторы системы имеют инструментарий для учёта всех\n    пользователей платформы, верификации их профилей и арбитража во\n    взаимоотношениях между мастерами и салонами, а также систему генерации\n    отчётов для задач по аналитике деятельности платформы.\n  </div>\n  <div class=\"admin_title2\">Обработка платежей</div>\n  <div class=\"admin_text2\">\n    Платформа интегрирована с крупнейшими платёжными сервисами, гарантирует\n    перечисление платы за аренду только после успешного завершения сделки и\n    предоставляет каждому пользователю ежемесячную отчётность о его расчётах на\n    платформе.\n  </div>\n  <img class=\"admin_photo\" src=\"../../assets/img/payments.png\" />\n</div>\n<div class=\"block_vacancies\">\n  <div class=\"vacan_title\">Готовы работать с нами?</div>\n  <div class=\"vacan\">\n    <a href=\"https://flexboxfroggy.com/#ru\">Вакансии</a>\n  </div>\n</div>\n"
+        },
+        {
+            "name": "TopBarComponent",
+            "id": "component-TopBarComponent-aff3ec1912b16292da1752447e2db51afd87cd45102f00a51fe18d9c297101eb14fe230e87685f37586e0f9ad0e36722951288c43724a67d98b357c47ecf8ab2",
+            "file": "src/app/top-bar/top-bar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-top-bar",
+            "styleUrls": [
+                "./top-bar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./top-bar.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-top-bar',\n  templateUrl: './top-bar.component.html',\n  styleUrls: ['./top-bar.component.scss'],\n})\nexport class TopBarComponent {}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./top-bar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "templateData": "<a [routerLink]=\"['/']\">\n  <h1>My Store</h1>\n</a>\n\n<a class=\"button fancy-button\"\n  ><i class=\"material-icons\">shopping_cart</i>Checkout</a\n>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-8d84ac98301fe01c3c67854da83be561ffb27f6ab07ee8acbd5aef37c1fe1c0bbe4e3e6002fa1e72e2d9bdd70eaa827890c646eb97c5017c68d8b4a4b340c1ce",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { ProductAlertsComponent } from './product-alerts/product-alerts.component';\nimport { ProductListComponent } from './product-list/product-list.component';\nimport { TopBarComponent } from './top-bar/top-bar.component';\nimport { ProductServicesComponent } from './product-services/product-services.component';\nimport { HeaderComponent } from './header/header.component';\nimport { ProductTurboCardComponent } from './product-turbo-card/product-turbo-card.component';\nimport { ProductVervveyComponent } from './product-vervvey/product-vervvey.component';\nimport { FooterComponent } from './footer/footer.component';\nimport { TranslateModule, TranslateLoader } from '@ngx-translate/core';\nimport { TranslateHttpLoader } from '@ngx-translate/http-loader';\nimport { HttpClient, HttpClientModule } from '@angular/common/http';\nexport function HttpLoaderFactory(httpClient: HttpClient) {\n  return new TranslateHttpLoader(httpClient);\n}\n@NgModule({\n  declarations: [\n    AppComponent,\n    ProductAlertsComponent,\n    ProductListComponent,\n    TopBarComponent,\n    ProductServicesComponent,\n    HeaderComponent,\n    ProductTurboCardComponent,\n    ProductVervveyComponent,\n    FooterComponent,\n  ],\n\n  imports: [\n    BrowserModule,\n    HttpClientModule,\n    TranslateModule.forRoot({\n      loader: {\n        provide: TranslateLoader,\n        useFactory: HttpLoaderFactory,\n        deps: [HttpClient],\n      },\n    }),\n    AppRoutingModule,\n  ],\n  providers: [],\n  bootstrap: [AppComponent],\n})\nexport class AppModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "FooterComponent"
+                        },
+                        {
+                            "name": "ProductAlertsComponent"
+                        },
+                        {
+                            "name": "ProductListComponent"
+                        },
+                        {
+                            "name": "ProductServicesComponent"
+                        },
+                        {
+                            "name": "ProductTurboCardComponent"
+                        },
+                        {
+                            "name": "ProductVervveyComponent"
+                        },
+                        {
+                            "name": "TopBarComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AppRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AppRoutingModule",
+            "id": "module-AppRoutingModule-b555dae4db3e9dc87774b89c1e13b3aab3b0234d854693a948083cb37c2ab62efa6ca0c38a8d2a2b926592d364926fe1493672120e9055dd9288d22e4fb04a6e",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app-routing.module.ts",
+            "methods": [],
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { CommonModule } from '@angular/common';\nimport { BrowserAnimationsModule } from '@angular/platform-browser/animations';\nimport { RouterModule, Routes } from '@angular/router';\nimport { ProductListComponent } from './product-list/product-list.component';\nimport { ProductServicesComponent } from './product-services/product-services.component';\nimport { ProductTurboCardComponent } from './product-turbo-card/product-turbo-card.component';\nimport { ProductVervveyComponent } from './product-vervvey/product-vervvey.component';\nconst routes: Routes = [\n  {\n    path: '',\n    component: ProductListComponent,\n  },\n  {\n    path: 'product-services',\n    component: ProductServicesComponent,\n  },\n  {\n    path: 'product-turbo-card',\n    component: ProductTurboCardComponent,\n  },\n  {\n    path: 'product-vervvey',\n    component: ProductVervveyComponent,\n  },\n];\n\n@NgModule({\n  declarations: [],\n  imports: [\n    CommonModule,\n    BrowserAnimationsModule,\n    RouterModule.forRoot(routes),\n  ],\n  exports: [RouterModule],\n})\nexport class AppRoutingModule {}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "context",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true\n}"
+            },
+            {
+                "name": "Large",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedIn",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LoggedOut",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Primary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "products",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/products.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\n  {\n    id: 1,\n    name: 'Phone XL',\n    price: 799,\n    description: 'A large phone with one of the best screens',\n  },\n  {\n    id: 2,\n    name: 'Phone Mini',\n    price: 699,\n    description: 'A great phone with one of the best cameras',\n  },\n  {\n    id: 3,\n    name: 'Phone Standard',\n    price: 299,\n    description: '',\n  },\n]"
+            },
+            {
+                "name": "require",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/test.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "literal type"
+            },
+            {
+                "name": "Secondary",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Small",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Button.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Button>",
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Header>",
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/Page.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story<Page>",
+                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+            }
+        ],
+        "functions": [
+            {
+                "name": "HttpLoaderFactory",
+                "file": "src/app/app.module.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "httpClient",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "httpClient",
+                        "type": "HttpClient",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/test.ts": [
+                {
+                    "name": "context",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "require.context('./', true, /\\.spec\\.ts$/)"
+                },
+                {
+                    "name": "require",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/test.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false\n}"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true\n}"
+                }
+            ],
+            "src/stories/Button.stories.ts": [
+                {
+                    "name": "Large",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Primary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Secondary",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Small",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Button.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Button>",
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Header.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Header>",
+                    "defaultValue": "(args: Header) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/stories/Page.stories.ts": [
+                {
+                    "name": "LoggedIn",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LoggedOut",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/Page.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story<Page>",
+                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
+                }
+            ],
+            "src/app/products.ts": [
+                {
+                    "name": "products",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/products.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\n  {\n    id: 1,\n    name: 'Phone XL',\n    price: 799,\n    description: 'A large phone with one of the best screens',\n  },\n  {\n    id: 2,\n    name: 'Phone Mini',\n    price: 699,\n    description: 'A great phone with one of the best cameras',\n  },\n  {\n    id: 3,\n    name: 'Phone Standard',\n    price: 299,\n    description: '',\n  },\n]"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "src/app/app.module.ts": [
+                {
+                    "name": "HttpLoaderFactory",
+                    "file": "src/app/app.module.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "httpClient",
+                            "type": "HttpClient",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "httpClient",
+                            "type": "HttpClient",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "className": "AppModule",
+        "children": [
+            {
+                "name": "routes",
+                "filename": "src/app/app-routing.module.ts",
+                "module": "AppRoutingModule",
+                "children": [
+                    {
+                        "path": "",
+                        "component": "ProductListComponent"
+                    },
+                    {
+                        "path": "product-services",
+                        "component": "ProductServicesComponent"
+                    },
+                    {
+                        "path": "product-turbo-card",
+                        "component": "ProductTurboCardComponent"
+                    },
+                    {
+                        "path": "product-vervvey",
+                        "component": "ProductVervveyComponent"
+                    }
+                ],
+                "kind": "module"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 2,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.module.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "HttpLoaderFactory",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/header/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product-alerts/product-alerts.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductAlertsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product-list/product-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product-services/product-services.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductServicesComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product-turbo-card/product-turbo-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductTurboCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/product-vervvey/product-vervvey.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProductVervveyComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/products.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Product",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/products.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "products",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/top-bar/top-bar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TopBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Large",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Primary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Secondary",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Small",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedIn",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LoggedOut",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/Page.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/User.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonComponent",
+                "coveragePercent": 83,
+                "coverageCount": "5/6",
+                "status": "very-good"
+            },
+            {
+                "filePath": "src/stories/header.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "HeaderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/page.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PageComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "context",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/test.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "require",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}
